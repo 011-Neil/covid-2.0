@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{>links}}
+    <title>Help</title>
+</head>
+<body id="body" onload="loadData()">
+    
+    {{>header}}
+
+  <div class="p-8 items-center">
+  <div class="bg-white flex items-center rounded-full shadow-xl mt-20 w-1/2 mx-80">
+    <input class="rounded-l-full w-full py-4 px-6 text-gray-700 leading-tight focus:outline-none" id="searchInput" type="text" placeholder="Search by Sate name">
+    
+    <div class="p-4">
+      <button id="searchBtn" class="bg-blue-500 text-white rounded-full p-2 hover:bg-blue-400 focus:outline-none w-12 h-12 flex items-center justify-center">
+        <i class="fas fa-search fx-3"></i>
+      </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="alert" id ="err"></div>
+<h1 class="heading">Hospitals and Bed Availability</h1>
+<div class="main flex-1 bg-gray-100 mt-1 w-3/4 h-2/5 rounded-t-3xl rounded-b-3xl  mx-40" id="frame">
+
+           
+                <div class="rounded-t-3xl bg-gradient-to-r from-blue-900 to-gray-800 p-4 shadow text-2xl text-white ">
+                    <h3 class="font-bold pl-2" Id="State">India</h3>
+                </div>
+            
+
+            <div class="flex flex-wrap">
+                <div class="w-full md:w-1/2 xl:w-1/3 p-6">
+                    <!--Metric Card-->
+                    <div class="bg-gradient-to-b from-green-200 to-green-100 border-b-4 border-green-600 rounded-lg shadow-xl p-5">
+                        <div class="flex flex-row items-center">
+                            <div class="flex-shrink pr-4">
+                                <div class="rounded-full p-5 bg-green-600"><i class="fas fa-hospital fa-2x fa-inverse"></i></div>
+                            </div>
+                            <div class="flex-1 text-right md:text-center">
+                                <h5 class="font-bold uppercase text-gray-600">Rural Hospitals</h5>
+                                <h3 class="font-bold text-3xl"><span id ="RuralH">3249</span> <span class="text-green-500"><i class="fas fa-hospital-symbol"></i></span></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/Metric Card-->
+                </div>
+                <div class="w-full md:w-1/2 xl:w-1/3 p-6">
+                    <!--Metric Card-->
+                    <div class="bg-gradient-to-b from-pink-200 to-pink-100 border-b-4 border-pink-500 rounded-lg shadow-xl p-5">
+                        <div class="flex flex-row items-center">
+                            <div class="flex-shrink pr-4">
+                                <div class="rounded-full p-5 bg-pink-600"><i class="fas fa-hospital fa-2x fa-inverse"></i></div>
+                            </div>
+                            <div class="flex-1 text-right md:text-center">
+                                <h5 class="font-bold uppercase text-gray-600">Urban Hospitals</h5>
+                                <h3 class="font-bold text-3xl"><span id ="UrbanH">3249</span> <span class="text-pink-500"><i class="fas fa-hospital-symbol"></i></span></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/Metric Card-->
+                </div>
+                <div class="w-full md:w-1/2 xl:w-1/3 p-6">
+                    <!--Metric Card-->
+                    <div class="bg-gradient-to-b from-yellow-200 to-yellow-100 border-b-4 border-yellow-600 rounded-lg shadow-xl p-5">
+                        <div class="flex flex-row items-center">
+                            <div class="flex-shrink pr-4">
+                                <div class="rounded-full p-5 bg-yellow-600"><i class="fas fa-hospital-user fa-2x fa-inverse"></i></div>
+                            </div>
+                            <div class="flex-1 text-right md:text-center">
+                                <h5 class="font-bold uppercase text-gray-600">Total Hospitals</h5>
+                                <h3 class="font-bold text-3xl"><span id ="TotalH">3249</span><span class="text-yellow-600"><i class="fas fa-caret-up"></i></span></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/Metric Card-->
+                </div>
+                <div class="w-full md:w-1/2 xl:w-1/3 p-6">
+                    <!--Metric Card-->
+                    <div class="bg-gradient-to-b from-blue-200 to-blue-100 border-b-4 border-blue-500 rounded-lg shadow-xl p-5">
+                        <div class="flex flex-row items-center">
+                            <div class="flex-shrink pr-4">
+                                <div class="rounded-full p-5 bg-blue-600"><i class="fas fa-bed fa-2x fa-inverse"></i></div>
+                            </div>
+                            <div class="flex-1 text-right md:text-center">
+                                <h5 class="font-bold uppercase text-gray-600">Rural Beds</h5>
+                                <h3 class="font-bold text-3xl"><span id ="RuralB">3249</span></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/Metric Card-->
+                </div>
+                <div class="w-full md:w-1/2 xl:w-1/3 p-6">
+                    <!--Metric Card-->
+                    <div class="bg-gradient-to-b from-indigo-200 to-indigo-100 border-b-4 border-indigo-500 rounded-lg shadow-xl p-5">
+                        <div class="flex flex-row items-center">
+                            <div class="flex-shrink pr-4">
+                                <div class="rounded-full p-5 bg-indigo-600"><i class="fas fa-bed fa-2x fa-inverse"></i></div>
+                            </div>
+                            <div class="flex-1 text-right md:text-center">
+                                <h5 class="font-bold uppercase text-gray-600">Urban Beds</h5>
+                                <h3 class="font-bold text-3xl"><span id ="UrbanB">3249</span></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/Metric Card-->
+                </div>
+                <div class="w-full md:w-1/2 xl:w-1/3 p-6">
+                    <!--Metric Card-->
+                    <div class="bg-gradient-to-b from-red-200 to-red-100 border-b-4 border-red-500 rounded-lg shadow-xl p-5">
+                        <div class="flex flex-row items-center">
+                            <div class="flex-shrink pr-4">
+                                <div class="rounded-full p-5 bg-red-600"><i class="fas fa-procedures fa-2x fa-inverse"></i></div>
+                            </div>
+                            <div class="flex-1 text-right md:text-center">
+                                <h5 class="font-bold uppercase text-gray-600">Total Beds</h5>
+                                <h3 class="font-bold text-3xl"><span id ="TotalB">3249</span><span class="text-red-500"><i class="fas fa-caret-up"></i></span></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/Metric Card-->
+                </div>
+            </div>
+</div>
+{{>footer}}
+
+<script src="Js/index.js"></script>
+ 
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    {{>links}}
+    <title>Covid Cases Live Update </title>
+</head>
+<body>
+     <header class=" body-font">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center ">
+          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+            <i class="fas fa-shield-virus fa-3x" ></i>
+            <span class="ml-3 text-xl">Covid Helper</span>
+          </a>
+          <nav class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-white	flex flex-wrap items-center text-base justify-center">
+            <a class="mr-5 " href="/">Home</a>
+            <a class="mr-5 " href="/help">Help</a>
+            <a class="mr-5 " href="/about">About</a>
+            <a class="mr-5 " href="/contact">Contact Us</a>
+          </nav>
+        </div>
+     </header>
+
+     <div class="p-8 items-center">
+  <div class="bg-white flex items-center rounded-full shadow-xl mt-20 w-1/2 mx-80">
+    <input class="rounded-l-full  rounded-r-full ml-5 w-full py-4 px-6 text-gray-700 leading-tight focus:outline-none" id="searchInput" type="text" placeholder="Search by country name">
+    
+    <div class="p-4">
+      <button id="searchBtn" class="bg-blue-500 text-white rounded-full p-2 hover:bg-blue-400 focus:outline-none w-12 h-12 flex items-center justify-center">
+        <i class="fas fa-search fx-3"></i>
+      </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="box">
+  <div class="inner-box">
+      <h2><span id="nation">World</span> Report</h2>
+  </div>
+  <div class="box-content">
+   <table>
+      <tr>
+        <td>Total Cases : </td>
+        <td><span id="cases">1000</span> <i class="fas fa-arrow-up"></i></td>
+      </tr>
+      <tr>
+        <td>New Cases : </td>
+        <td>+ <span id="Tcases"> + 1000</span> <i class="fas fa-arrow-up"></i></td>
+      </tr>
+      <tr>
+        <td>Total Death : </td>
+        <td> <span id="death">  1000</span> <i class="fas fa-arrow-up"></i></td>
+      </tr>
+      <tr>
+        <td> New Death : </td>
+        <td>+ <span id="Tdeath">10000</span> <i class="fas fa-arrow-up"></i></td>
+      </tr>
+      <tr>
+        <td>Recovered : </td>
+        <td><span id="recovered">10000</span><i class="fas fa-arrow-up"></i></td>
+      </tr>
+      <tr>
+        <td>Active Cases : </td>
+        <td><span id="active">1000</span><i class="fas fa-arrow-up"></i></td>
+      </tr>
+    </table>
+  </div>
+  
+</div>
+
+  <div class="cotent"> 
+    <div class="  md:pt-32 pb-32 pt-12">
+          <div class="main px-4 md:px-10  w-full ">
+            
+              <!-- Card stats -->
+              <div class="flex flex-wrap" id="card">
+                
+                <div class="w-full lg:w-6/12 xl:w-3/12 px-4">
+            <div class="relative flex flex-col min-w-0 break-words rounded mb-6 xl:mb-0 shadow-lg  " id="" onmouseover="hoverInfo()">
+                <div class="flex-auto p-4 mt-10" >
+                    <div class="flex flex-wrap">
+                        <div class="relative w-full text-white pr-4 max-w-full flex-grow flex-1">
+                          <h1 class="country" id='country'>USA</h1>
+                          <div class="data">
+                              <p>Cases :<span id="CaseStat">10000</span> </p>
+                              <p>Death : <span id="usDeath">10000</span></p>
+                              <span class="hideData" id='hide' >
+                                <p>Recovered :<span id="Recovered">10000</p>
+                              </span>
+                          </div>
+                        </div>
+                        <div class="relative w-auto pl-4 flex-initial">
+                          <div class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full bg-red-500">
+                            <i class="far fa-chart-bar"></i>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+              </div>
+                
+                
+            </div>
+          </div>
+        </div>
+      </div>
+       
+    {{>footer}}
+    <script src="Js/covidTracker.js"></script>
+</body>
+</html>

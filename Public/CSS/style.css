@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@100&family=Tourney:wght@100&display=swap');
+html{
+    background-color: #69a0ff;
+    width: auto;
+    height: 100vh;
+}
+
+header{
+    background-color:#1e6ef8;
+    opacity: 80%;
+    width: 100%;
+    font-family: Amatic+DC ;
+    color: black;
+}
+a{
+    cursor: pointer;
+}
+a:hover{
+    color: azure;
+}
+.text-xl{
+    font-family: Staatliches;
+}
+header button{
+    border-radius: 20px;
+    background-color: #69a0ff;
+    color: aliceblue;
+}
+
+header button:hover{
+    background-color: aqua;
+    color: black;
+}
+.container-main a{
+    color: blue;
+    cursor: pointer;
+}
+
+.container-main a:hover{
+    color : whitesmoke;
+}
+footer{
+    color: black;
+}
+
+footer a:hover{
+    color: bisque;
+    cursor: pointer;
+}
+
+/* contact us page style */
+.send button{
+    background-color: blue;
+    cursor: pointer;
+}
+.send button:hover{
+    background-color: cadetblue;
+    color: black;
+}
+
+/* help page style */
+
+.heading{
+    font-size: 50px;
+    color: aliceblue;
+    text-align: center;
+}
+
+
+/* Covid tracker page */
+.box{
+    margin: auto;
+    width: 300px;
+    height: max-content;
+    align-items: center;
+    background-color: #95D6F9;
+    border: none;
+    border-radius: 20px;
+    box-sizing: content-box;
+
+}
+.inner-box{
+    margin: auto;
+    width: auto;
+    height: 50px;
+    background-color: black;
+    color: azure;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.inner-box h2{
+    text-align: center;
+    font-family: Encode Sans SC;
+    font-size: 30px;
+}
+
+/* .box-content span{
+    display: flex;
+    justify-content:space-evenly;
+} */
+
+table{
+    display: flex;
+    border: none;
+    justify-content: center;
+    font-family: Antic Slab;
+    font-size: 20px;
+    color: black;
+}
+
+/* card stats */
+.country{
+    font-family: Encode Sans SC;
+    font-size: 40px;
+}
+.data{
+    margin-top: 20px;
+    font-family: Antic Slab;
+    font-size: 20px;
+}
+#card{
+    background-color: #CFECFC;
+    border-radius: 10px;
+    padding-bottom: 40px;
+    
+}
+
+.relative{
+    background-color: rgb(51, 50, 50);
+    color: white;
+    
+}
+.relative:hover{
+    display: inline;
+    cursor: pointer;
+}
+#hide{
+    display: none;
+}
+
+/* Vaccine Aviability page */
+
+
+select{
+    height: 40px;
+    width: 200px;
+    background: white;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    padding: 0 40px 0 10px;
+    margin: auto;
+    
+}
+
+
+.select{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+
+
+
+.title{
+    margin: auto;
+    text-align: center;
+    font-size: 50px;
+    font-family: Encode Sans SC;
+    padding-bottom: 20px;
+    text-shadow: 10px 20px 30px blue;
+}
+
+
+.title img{
+    margin: auto;
+}
+
+.main{
+    border-radius: 10px;
+    display: flex;
+}
+
+#search{
+    background-color: #1e6ef8;
+    border-radius: 20px;
+    width: 100px;
+    box-shadow: 2px 4px 6px  darkblue;
+}
+
+#search:hover{
+    background-color: aliceblue;
+    color: black;
+    box-shadow: 2px 4px 6px black;
+}
+.block{
+    display: flex;
+    justify-content: space-between;
+}
+
+.info{
+    display: none;
+}
+/* .main{
+    background-color: #0040FF;
+} */
+@media (max-width : 768px){
+    header{
+        height: 10%;
+
+    }
+    
+}
